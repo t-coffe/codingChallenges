@@ -1,6 +1,6 @@
 const oneToTen = document.querySelector(".oneToTen p");
 let UNaDix = " ";
-for (let i = 0; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
   UNaDix = UNaDix + " " + i;
   oneToTen.textContent = UNaDix;
 }
@@ -42,8 +42,37 @@ for (let i = 1; i <= 10; i++) {
   produitUNaDix.textContent = foisUnAdix;
 }
 
-const celsiusToFahrenheit = document.querySelector(".celsiusToFahrenheit p");
+const sumEven = document.querySelector(".sumEven p");
+let sommePaire =0;
+for (let i = 10; i <= 30; i=i+2) {
+  sommePaire = sommePaire + i;
+  sumEven.textContent = sommePaire;
+}
 
-const celToFarh = (n)=> {
-  
+const celsiusToFahrenheit = document.querySelector(".celVal");
+const fahrenheitToCelsius = document.querySelector(".fahrVal");
+const pCels = document.querySelector(".content");
+let chiffreC ;
+let valuC ; 
+let chiffreF ;
+let valuF ; 
+const reset = "";
+celsiusToFahrenheit.addEventListener('input', ()=>{
+  pCels.textContent = reset;
+  valuC = celsiusToFahrenheit.value ;
+  chiffreC = valuC*9/5 + 32 ;
+  pCels.textContent = chiffreC;
+});
+fahrenheitToCelsius.addEventListener('input', ()=>{
+  pCels.textContent = reset;
+  valuF = fahrenheitToCelsius.value ;
+  chiffreF = valuF-32 * 5/9 ;
+  pCels.textContent = chiffreF;
+});
+
+const sumArray = document.querySelector(".sumArray p");
+let sommeArray = ["1","2","3"];
+for (let i = 1; i < sommeArray; i++) {
+  sommeArray = sommeArray + sommeArray[i];
+  sumArray.textContent = sommeArray;
 }
