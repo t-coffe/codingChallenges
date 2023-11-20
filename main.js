@@ -71,8 +71,26 @@ fahrenheitToCelsius.addEventListener('input', ()=>{
 });
 
 const sumArray = document.querySelector(".sumArray p");
-let sommeArray = ["1","2","3"];
-for (let i = 1; i < sommeArray; i++) {
-  sommeArray = sommeArray + sommeArray[i];
-  sumArray.textContent = sommeArray;
+let sommeArray = [1,2,3];
+let arraysult = sommeArray[0];
+for (let i = 1; i < sommeArray.length; i++) {
+  arraysult += sommeArray[i];
 }
+sumArray.textContent = arraysult;
+
+const moyenne = document.querySelector(".moyenne p");
+let tabM = [1,2,3];
+let arraM = tabM[0];
+for (let i = 1; i < tabM.length; i++) {
+  arraM += tabM[i];
+}
+moyenne.textContent = arraM/tabM.length;
+
+const positive = document.querySelector(".positive p");
+let pos = [1,2,-4,3,4];
+let arraP = [];
+for (let i = 0; i < pos.length; i++) {
+  if (pos[i] > 0) {
+    arraP.push(pos[i]);
+  }
+} positive.textContent = arraP;
