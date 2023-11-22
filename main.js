@@ -94,3 +94,59 @@ for (let i = 0; i < pos.length; i++) {
     arraP.push(pos[i]);
   }
 } positive.textContent = arraP;
+
+const max = document.querySelector(".max p");
+let tab = [7,5,8,2];
+let Pgrand = tab[0];
+for (let i = 1; i < tab.length; i++) {
+  if (tab[i] > Pgrand) {
+    Pgrand = tab[i];
+  }
+} max.textContent = Pgrand;
+
+const fibonacciDix = document.querySelector(".fibonacciDix");
+let stockagefibonacciDix = 0;
+let avantDernierfibonacciDix = 0;
+let DernierfibonacciDix = 1;
+let ArrayStockageFibonicciDix = [];
+for (let i = 0; i < 10; i++) {
+  stockagefibonacciDix = avantDernierfibonacciDix + DernierfibonacciDix; 
+  avantDernierfibonacciDix = DernierfibonacciDix;
+  DernierfibonacciDix = stockagefibonacciDix ; 
+  ArrayStockageFibonicciDix.push(DernierfibonacciDix);
+} fibonacciDix.textContent = ArrayStockageFibonicciDix;
+
+const fibonaccInput = document.querySelector(".fibonaccInput p");
+const InputFibonacci = document.querySelector(".fibonaccInput input");
+const buttonFibonacci = document.querySelector(".fibonaccInput button");
+let stockageFibonacciInput = 0;
+let avantDernierFibonacciInput = 0;
+let DernierFibonacciInput = 1;
+let ArrayStockageFibonicciInput = [];
+/* buttonFibonacci.addEventListener('click', fonctionFibonacci);
+
+const fonctionFibonacci = ()=>{
+  for (let i = 0; i < InputFibonacci.value; i++) {
+  stockageFibonacciInput = avantDernierFibonacciInput + DernierFibonacciInput; 
+  avantDernierFibonacciInput = DernierFibonacciInput;
+  DernierFibonacciInput = stockageFibonacciInput ; 
+  ArrayStockageFibonicciInput.push(DernierFibonacciInput);
+} 
+fibonaccInput.textContent = ArrayStockageFibonicciInput;
+}
+ */
+buttonFibonacci.addEventListener('click', (n)=>{
+  fibonaccInput.textContent = "";
+  ArrayStockageFibonicciInput = [];
+  avantDernierFibonacciInput = 0;
+  DernierFibonacciInput = 1;
+  for (let i = 0; i < InputFibonacci.value; i++) {
+    stockageFibonacciInput = avantDernierFibonacciInput + DernierFibonacciInput; 
+    avantDernierFibonacciInput = DernierFibonacciInput;
+    DernierFibonacciInput = stockageFibonacciInput ; 
+    ArrayStockageFibonicciInput.push(DernierFibonacciInput);
+  } 
+  fibonaccInput.textContent = ArrayStockageFibonicciInput;
+})
+
+const prime = 
