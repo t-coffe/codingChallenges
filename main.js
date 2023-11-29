@@ -116,15 +116,6 @@ for (let i = 0; i < 10; i++) {
   ArrayStockageFibonicciDix.push(DernierfibonacciDix);
 } fibonacciDix.textContent = ArrayStockageFibonicciDix;
 
-const fibonaccInput = document.querySelector(".fibonaccInput p");
-const InputFibonacci = document.querySelector(".fibonaccInput input");
-const buttonFibonacci = document.querySelector(".fibonaccInput button");
-let stockageFibonacciInput = 0;
-let avantDernierFibonacciInput = 0;
-let DernierFibonacciInput = 1;
-let ArrayStockageFibonicciInput = [];
-/* buttonFibonacci.addEventListener('click', fonctionFibonacci);
-
 const fonctionFibonacci = ()=>{
   for (let i = 0; i < InputFibonacci.value; i++) {
   stockageFibonacciInput = avantDernierFibonacciInput + DernierFibonacciInput; 
@@ -134,7 +125,17 @@ const fonctionFibonacci = ()=>{
 } 
 fibonaccInput.textContent = ArrayStockageFibonicciInput;
 }
- */
+
+const fibonaccInput = document.querySelector(".fibonaccInput p");
+const InputFibonacci = document.querySelector(".fibonaccInput input");
+const buttonFibonacci = document.querySelector(".fibonaccInput button");
+let stockageFibonacciInput = 0;
+let avantDernierFibonacciInput = 0;
+let DernierFibonacciInput = 1;
+let ArrayStockageFibonicciInput = [];
+buttonFibonacci.addEventListener('click', fonctionFibonacci);
+
+
 buttonFibonacci.addEventListener('click', (n)=>{
   fibonaccInput.textContent = "";
   ArrayStockageFibonicciInput = [];
@@ -149,4 +150,21 @@ buttonFibonacci.addEventListener('click', (n)=>{
   fibonaccInput.textContent = ArrayStockageFibonicciInput;
 })
 
-const prime = 
+
+const returnPrimeOrNot = document.querySelector(".prime input");
+const btnReturnPrimeOrNot = document.querySelector(".prime button");
+
+btnReturnPrimeOrNot.addEventListener("click", ()=>{
+  let prime = returnPrimeOrNot.value;
+  if (prime == 2 || prime == 3 || prime == 5 || prime == 7 || prime == 11 ) {
+    alert("this IS a prime number !!!!");
+  } else {
+    if (returnPrimeOrNot.length === 0) {
+    alert("please enter a correct value");
+  } else if (prime % 2 === 0 || prime % 3 === 0 || prime % 5 === 0 || prime % 7 === 0 || prime % 11 === 0 ) {
+    alert("this is NOT a prime number");
+  } else {
+    alert("this IS a prime number !!!!");
+  }
+  }
+});
