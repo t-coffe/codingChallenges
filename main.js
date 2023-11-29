@@ -104,7 +104,7 @@ for (let i = 1; i < tab.length; i++) {
   }
 } max.textContent = Pgrand;
 
-const fibonacciDix = document.querySelector(".fibonacciDix");
+const fibonacciDix = document.querySelector(".fibonacciDix p");
 let stockagefibonacciDix = 0;
 let avantDernierfibonacciDix = 0;
 let DernierfibonacciDix = 1;
